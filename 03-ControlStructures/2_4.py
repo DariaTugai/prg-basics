@@ -1,0 +1,26 @@
+###
+# Simple calculator
+# Asks the user to enter a symbol of mathematical operation (+, -, *, /)
+# and two numbers. The program should perform the appropriate
+# mathematical operation on the given numbers and return the result.   
+# 
+number1 = input ('Enter first number: ')
+number2 = input ('Enter second number: ')
+operator = input('Enter operator (+, -, *, /): ')
+result = 0
+
+if operator == '+':
+    result = number1 + number2
+elif operator == '-':
+    result = number1 - number2  
+elif operator == '*':
+    result = number1 * number2  
+elif operator == '/':
+    if number2 != 0:
+        result = number1 / number2  
+    else:
+        result = 'Error: Division by zero'
+else:
+    result = 'Error: Unknown operator'  
+
+print(f'{number1} {operator} {number2} = {result}')
