@@ -14,6 +14,6 @@ def pts_to_grade(points):
         grade= 'Fail'
     return grade
 
-test_result = 18s
+test_result = 18
 final_grade = pts_to_grade(test_result)
 print(f'You scored {test_result} points on the test. Your final grade is {final_grade}')
