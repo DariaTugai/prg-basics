@@ -1,17 +1,15 @@
 arr=[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
-j=1
-st=2
+number_first_row=1
+second_row=1
+multiply_by=2
 for i in range(len(arr[0])):
-    arr[0][i]=j
-    j+=1
-# while st<6:
-#     for j in range(len(arr[0])):
-#         arr[1][j]=arr[0][j]*st
-#     st+=1
-# print(arr)
-while st<6:
-    for f in range(len(arr)):
-        for j in range(len(arr[0])):
-            arr[f+1][j]=arr[f][j]*st
-        st+=1
-print(arr)
+    arr[0][i]=number_first_row
+    number_first_row+=1
+while second_row<5:
+    for z in range(len(arr[second_row])):
+        arr[second_row][z]=(arr[second_row-1][z])*multiply_by
+    second_row+=1
+    multiply_by+=1
+
+for row in arr:
+    print(' '.join(str(x) for x in row))
