@@ -7,7 +7,7 @@ for i in range(len(arr[0])):
     number_first_row+=1
 while second_row<5:
     for z in range(len(arr[second_row])):
-        arr[second_row][z]=(arr[second_row-1][z])*multiply_by
+        arr[second_row][z]=(arr[0][z])*multiply_by
     second_row+=1
     multiply_by+=1
 
