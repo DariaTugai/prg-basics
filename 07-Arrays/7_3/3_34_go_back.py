@@ -6,6 +6,6 @@ def identity_matrix(n):
     for row in matrix:
         row[count]=1
         count+=1
-    return matrix
-
+    print(matrix)
+    return '\n'.join([' '.join([str(x) for x in row]) for row in matrix])
 print(identity_matrix(5))
