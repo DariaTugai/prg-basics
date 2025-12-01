@@ -9,3 +9,5 @@ def identity_matrix(n):
     print(matrix)
     return '\n'.join([' '.join([str(x) for x in row]) for row in matrix])
 print(identity_matrix(5))
+
+#'\n'.join([' '.join([str(x) for x in row]) for row in matrix])
