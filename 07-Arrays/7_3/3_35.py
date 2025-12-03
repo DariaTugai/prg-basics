@@ -1,20 +1,13 @@
 def transpose_matrix(m):
+    general=[]
     newarr=[]
-    rows=0
-    columns=0
-    row1=0
-    col1=0
-    for row in m:
-        rows+=1
-    for i in m[0]:
-        columns+=1
-    while True:
+    rows = len(m)
+    columns=len(m[0])
+    for t in range(columns):
         for z in range(rows):
-            newarr.append(m[row1][0])
-            row1+=1
-            col1+=1
-            if row1==rows:
-                    break 
-    return newarr
+            newarr.append(m[z][t])
+        general.append(newarr)
+        newarr=[]
+    return general
 
-print(transpose_matrix([[1,2,3],[4,5,6],[7,8,9]]))
+print(transpose_matrix([[1,2,3],[4,5,6],[7,8,9],[9,0,8]]))
