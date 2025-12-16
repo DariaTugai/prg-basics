@@ -13,12 +13,13 @@ def brackets_ok(expression):
       elif i==']':
          closing.put('[')
       elif i=='}':
-         closing.put('}')
+         closing.put('{')
       elif i==')':
          closing.put('(')
 
-          
-   return opening==closing
+   return opening==reversed(closing)
+
+
 if brackets_ok(expression1):
    print(...)
 else
