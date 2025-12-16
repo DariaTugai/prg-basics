@@ -17,14 +17,14 @@ def brackets_ok(expression):
       elif i==')':
          closing.put('(')
 
-   return opening==reversed(closing)
+   return opening==(closing)
+print(brackets_ok(expression1))
 
+# if brackets_ok(expression1):
+#    print(...)
+# else
+#    ...
 
-if brackets_ok(expression1):
-   print(...)
-else
-   ...
-
-if brackets_ok(expression2):
-...
-...
+# if brackets_ok(expression2):
+# ...
+# ...
