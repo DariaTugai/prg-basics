@@ -5,26 +5,24 @@ expression2 = "[(2+3]/4)"                 # brackets not correct
 expression3 = "(2-3*4+(5/6)"              # brackets not correct
 
 def brackets_ok(expression):
-   opening=queue.LifoQueue()
-   closing=queue.LifoQueue()
-   for i in expression:
-      if i=='[' or i=='{' or i=='(':
-         opening.put(i)
-      elif i==']':
-         closing.put('[')
-      elif i=='}':
-         closing.put('{')
-      elif i==')':
-         closing.put('(')
-
-   return opening==(closing)
+    opening=queue.LifoQueue()
+    for i in expression:
+        if i=='[':
+            opening.put('A')
+        elif i=='{':
+            opening.put('B')
+        elif i=='(':
+            opening.put('C')
+        elif i==']':
+            if opening.get()!='A':
+                return False
+        elif i=='}':
+            if opening.get()!='B':
+                return False
+        elif i==')':
+            if opening.get()!='C':
+                return False
+    return True
+  
 print(brackets_ok(expression1))
-
-# if brackets_ok(expression1):
-#    print(...)
-# else
-#    ...
-
-# if brackets_ok(expression2):
-# ...
-# ...
+print(brackets_ok(expression2))
