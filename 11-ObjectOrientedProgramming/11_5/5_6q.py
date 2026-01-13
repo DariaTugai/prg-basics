@@ -9,7 +9,8 @@ class Bank_account():
     def withdraw(self,amount):
         if amount<= self.balance:
             self.balance-=amount
-       
+        else:
+            print('Insufficient funds on the account')   ###?????
 
     def get_data(self):
         print(f'Bank Account No: {self.number}')             
@@ -19,4 +20,4 @@ acc=Bank_account('12 3456 5555 9090 1111 0000 7722',0)
 acc.deposit(25.30)
 acc.get_data()
 acc.withdraw(26)
-acc.get_data()
+# acc.get_data()
