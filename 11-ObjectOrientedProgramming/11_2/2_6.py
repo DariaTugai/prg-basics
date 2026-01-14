@@ -24,7 +24,7 @@ class Phone():
 def main():
     my_phone= Phone('samsung','A54',600)
     my_phone.prise_up(250)
-    my_phone.on()
+    my_phone.phone_on()
     my_phone.display_info()
 
 
